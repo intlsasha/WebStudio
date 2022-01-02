@@ -1,0 +1,319 @@
+.container-fluid {
+  width: 1600px;
+  height: 600px;
+  margin: auto;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/index-images/bg-img.jpg');
+  background-size: cover;
+  background-color: $bg-dark;
+  background-position: center;
+
+  text-align: center;
+
+  &--team {
+    background-color: $bg-light;
+  }
+}
+
+// hero section
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: $pure-white;
+}
+
+.hero__button {
+  margin: 0;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: $pure-white;
+
+  background-color: $highlight-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+
+  cursor: pointer;
+}
+
+.hero--centered {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+// strengths section
+
+.strengths {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 30px * 3) / 4);
+    margin-right: 30px;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__static-icon-box {
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: $bg-light;
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $main-color;
+  }
+
+  &__description {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: $accent-color;
+  }
+}
+
+// competencies section
+
+.competencies {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $main-color;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-basis: calc((100% - 2 * 30px) / 3);
+    margin-right: 30px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__descr-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8));
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $pure-white;
+  }
+
+  &__description {
+    margin: 0;
+    padding: 27px 0;
+  }
+}
+
+// team section
+
+.team {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+
+    color: $main-color;
+  }
+
+  &__list {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+    margin-right: 30px;
+
+    background-color: $pure-white;
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+
+    box-shadow: none;
+
+    transition: box-shadow $transition-time $cubic;
+  }
+
+  &__item:hover,
+  &__item:focus {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__profile-pic {
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+
+    letter-spacing: 0.03em;
+
+    color: $main-color;
+  }
+
+  &__job {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+
+    letter-spacing: 0.03em;
+
+    color: $accent-color;
+  }
+}
+
+.team-social {
+  display: flex;
+  justify-content: center;
+
+  padding-bottom: 30px;
+  padding-right: 32px;
+  padding-left: 32px;
+
+  &__link {
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+
+    background-color: transparent;
+    fill: $icon-color;
+    border-radius: 50%;
+
+    transition: background-color $transition-time $cubic, fill $transition-time $cubic;
+  }
+
+  &__item {
+    margin-right: 10px;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    fill: $pure-white;
+    background-color: $highlight-color;
+  }
+}
+
+//clients section
+
+.clients {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $main-color;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    margin-right: 30px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    position: relative;
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+
+    fill: $icon-color;
+
+    transition: fill $transition-time $cubic, border-color $transition-time $cubic;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__link:hover,
+  &__link:focus {
+    border-color: $highlight-color;
+    fill: $highlight-color;
+  }
+}

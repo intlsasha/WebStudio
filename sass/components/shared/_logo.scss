@@ -1,0 +1,28 @@
+.logo {
+  padding: 24px 0px;
+
+  font-family: 'Raleway', 'sans-serif';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: $pure-black;
+
+  &__web {
+    color: $highlight-color;
+  }
+
+  &__inverse {
+    color: $pure-white;
+  }
+
+  &__header {
+    margin-right: 93px;
+  }
+
+  &--bot {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+}
