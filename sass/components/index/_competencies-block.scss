@@ -1,0 +1,54 @@
+.section {
+  &--hidden {
+    display: none;
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.competencies {
+  &__title {
+    @include title-web;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__descr-box {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: rgba(47, 48, 58, 0.8);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $pure-white;
+  }
+
+  &__description {
+    margin: 0;
+  }
+}

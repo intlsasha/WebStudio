@@ -1,0 +1,174 @@
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+}
+
+.modal {
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $pure-white;
+  width: calc(100% - 30px);
+
+  @media screen and (min-width: 480px) {
+    max-width: 450px;
+  }
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    background: $pure-white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    fill: $main-color;
+
+    transition: fill $transition-time $cubic;
+  }
+
+  &__close-button:hover,
+  &__close-button:focus,
+  &__close-button:active {
+    fill: $highlight-color;
+  }
+}
+
+.modal-form {
+  &__title {
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $main-color;
+  }
+
+  &__label {
+    display: inline-block;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: $accent-color;
+
+    @media screen and (min-width: 1200px) {
+      line-height: 1.71;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  &__effect {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    padding: 11px 12px;
+    padding-left: 42px;
+    width: 100%;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: border $transition-time $cubic;
+  }
+
+  &__effect:hover &__icon,
+  &__effect:focus &__icon,
+  &__effect:active &__icon {
+    fill: $highlight-color;
+  }
+
+  &__effect:hover &__input,
+  &__effect:focus &__input,
+  &__effect:active &__input {
+    border: 1px solid $highlight-color;
+  }
+
+  &__input--comment {
+    padding-left: 12px;
+    margin-bottom: 20px;
+    resize: none;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 12px;
+    fill: $main-color;
+
+    transition: fill $transition-time $cubic;
+  }
+
+  &__input--comment::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &__terms {
+    color: $highlight-color;
+    text-decoration: underline;
+  }
+
+  &__section--opt-in {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__checkmark {
+    display: inline;
+    vertical-align: sub;
+    fill: $pure-white;
+    border: 2px solid $main-color;
+    border-radius: 2px;
+  }
+
+  &__opt-in:checked + &__checkmark {
+    border: none;
+    background-color: $highlight-color;
+  }
+
+  &__submit-button {
+    display: flex;
+    margin: auto;
+    @include button-main;
+    padding: 10px 55px;
+  }
+}
