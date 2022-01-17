@@ -20,22 +20,21 @@
     }
   }
 
-  &__item:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
-    }
-  }
   &__item {
     @media screen and (min-width: 768px) {
       margin: 15px;
       flex-basis: calc((100% - 4 * 15px) / 2);
     }
-  }
 
-  &__item {
     @media screen and (min-width: 1200px) {
       flex-basis: calc((100% - 8 * 15px) / 4);
       text-align: left;
+    }
+
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
     }
   }
 

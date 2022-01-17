@@ -50,12 +50,12 @@
     fill: $main-color;
 
     transition: fill $transition-time $cubic;
-  }
 
-  &__close-button:hover,
-  &__close-button:focus,
-  &__close-button:active {
-    fill: $highlight-color;
+    &:hover,
+    &:focus,
+    &:active {
+      fill: $highlight-color;
+    }
   }
 }
 
@@ -118,6 +118,15 @@
     padding-left: 12px;
     margin-bottom: 20px;
     resize: none;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.01em;
+
+      color: rgba(117, 117, 117, 0.5);
+    }
   }
 
   &__icon {
@@ -129,15 +138,6 @@
     fill: $main-color;
 
     transition: fill $transition-time $cubic;
-  }
-
-  &__input--comment::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
-
-    color: rgba(117, 117, 117, 0.5);
   }
 
   &__terms {

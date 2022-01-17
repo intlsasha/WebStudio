@@ -38,12 +38,12 @@
     color: rgba(255, 255, 255, 0.6);
 
     transition: color $transition-time $cubic;
-  }
 
-  &__link:hover,
-  &__link:active,
-  &__link:focus {
-    color: $highlight-color;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $highlight-color;
+    }
   }
 
   &__item:not(:last-child) {

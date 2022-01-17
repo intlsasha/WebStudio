@@ -39,12 +39,12 @@
     fill: $icon-color;
 
     transition: border-color $transition-time $cubic, fill $transition-time $cubic;
-  }
 
-  &__link:hover,
-  &__link:focus,
-  &__link:active {
-    border-color: $highlight-color;
-    fill: $highlight-color;
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $highlight-color;
+      fill: $highlight-color;
+    }
   }
 }

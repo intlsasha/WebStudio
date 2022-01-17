@@ -40,10 +40,10 @@
     @media screen and (min-width: 1200px) {
       flex-basis: calc((100% - 120px) / 4);
     }
-  }
 
-  &__item:last-child {
-    margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__profile-pic {
@@ -80,13 +80,13 @@
     border-radius: 50%;
 
     transition: background-color $transition-time $cubic, fill $transition-time $cubic;
-  }
 
-  &__link:hover,
-  &__link:active,
-  &__link:focus {
-    fill: $pure-white;
-    background-color: $highlight-color;
+    &:hover,
+    &:active,
+    &:focus {
+      fill: $pure-white;
+      background-color: $highlight-color;
+    }
   }
 
   &__item:not(:last-child) {
