@@ -33,7 +33,7 @@
 
   <body>
     <header class="headpiece">
-      <div class="container">
+      <div class="container container--flex">
         <a href="./index.html" class="logo logo__header">
           <span class="logo__web">Web</span>Studio</a
         >
@@ -104,17 +104,15 @@
     </header>
     <main>
       <!-- hero section -->
-      <div class="container-fluid container-fluid--centered">
+      <section class="hero section">
         <div class="container">
-          <section class="hero section">
-            <h1 class="hero__title">
-              Эффективные решения <br />
-              для вашего бизнеса
-            </h1>
-            <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
-          </section>
+          <h1 class="hero__title">
+            Эффективные решения <br />
+            для вашего бизнеса
+          </h1>
+          <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
         </div>
-      </div>
+      </section>
 
       <!-- strengths section -->
       <div class="container">
@@ -170,8 +168,9 @@
       </div>
 
       <!-- competencies section -->
-      <div class="container">
-        <section class="competencies section section--hidden">
+
+      <section class="competencies section section--hidden">
+        <div class="container">
           <h2 class="competencies__title">Чем мы занимаемся</h2>
           <ul class="competencies__list">
             <li class="competencies__item">
@@ -214,30 +213,30 @@
               </div>
             </li>
           </ul>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <!-- team section -->
-      <div class="container-fluid--team">
+      <section class="team section">
         <div class="container">
-          <section class="team section">
-            <h2 class="team__title">Наша команда</h2>
-            <ul class="team__list">
-              <li class="team__item">
-                <img
-                  class="team__profile-pic"
-                  srcset="
-                    ./images/index-images/team1-mobile.jpg     450w,
-                    ./images/index-images/team1-tablet.jpg     354w,
-                    ./images/index-images/team1-desktop.jpg    270w,
-                    ./images/index-images/team1-mobile@2x.jpg  900w,
-                    ./images/index-images/team1-tablet@2x.jpg  708w,
-                    ./images/index-images/team1-desktop@2x.jpg 540w
-                  "
-                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
-                  src="./images/index-images/team1-mobile.jpg"
-                  alt="мужчина"
-                />
+          <h2 class="team__title">Наша команда</h2>
+          <ul class="team__list">
+            <li class="team__item">
+              <img
+                class="team__profile-pic"
+                srcset="
+                  ./images/index-images/team1-mobile.jpg     450w,
+                  ./images/index-images/team1-tablet.jpg     354w,
+                  ./images/index-images/team1-desktop.jpg    270w,
+                  ./images/index-images/team1-mobile@2x.jpg  900w,
+                  ./images/index-images/team1-tablet@2x.jpg  708w,
+                  ./images/index-images/team1-desktop@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/index-images/team1-mobile.jpg"
+                alt="мужчина"
+              />
+              <div class="team__card">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p class="team__job" lang="en">Product Designer</p>
                 <ul class="team-social">
@@ -273,22 +272,24 @@
                     </a>
                   </li>
                 </ul>
-              </li>
-              <li class="team__item">
-                <img
-                  class="team__profile-pic"
-                  srcset="
-                    ./images/index-images/team2-mobile.jpg     450w,
-                    ./images/index-images/team2-tablet.jpg     354w,
-                    ./images/index-images/team2-desktop.jpg    270w,
-                    ./images/index-images/team2-mobile@2x.jpg  900w,
-                    ./images/index-images/team2-tablet@2x.jpg  708w,
-                    ./images/index-images/team2-desktop@2x.jpg 540w
-                  "
-                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
-                  src="./images/index-images/team2-mobile.jpg"
-                  alt="женщина"
-                />
+              </div>
+            </li>
+            <li class="team__item">
+              <img
+                class="team__profile-pic"
+                srcset="
+                  ./images/index-images/team2-mobile.jpg     450w,
+                  ./images/index-images/team2-tablet.jpg     354w,
+                  ./images/index-images/team2-desktop.jpg    270w,
+                  ./images/index-images/team2-mobile@2x.jpg  900w,
+                  ./images/index-images/team2-tablet@2x.jpg  708w,
+                  ./images/index-images/team2-desktop@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/index-images/team2-mobile.jpg"
+                alt="женщина"
+              />
+              <div class="team__card">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p class="team__job" lang="en">Frontend Developer</p>
                 <ul class="team-social">
@@ -327,22 +328,24 @@
                     </a>
                   </li>
                 </ul>
-              </li>
-              <li class="team__item">
-                <img
-                  class="team__profile-pic"
-                  srcset="
-                    ./images/index-images/team3-mobile.jpg     450w,
-                    ./images/index-images/team3-tablet.jpg     354w,
-                    ./images/index-images/team3-desktop.jpg    270w,
-                    ./images/index-images/team3-mobile@2x.jpg  900w,
-                    ./images/index-images/team3-tablet@2x.jpg  708w,
-                    ./images/index-images/team3-desktop@2x.jpg 540w
-                  "
-                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
-                  src="./images/index-images/team3-mobile.jpg"
-                  alt="мужчина"
-                />
+              </div>
+            </li>
+            <li class="team__item">
+              <img
+                class="team__profile-pic"
+                srcset="
+                  ./images/index-images/team3-mobile.jpg     450w,
+                  ./images/index-images/team3-tablet.jpg     354w,
+                  ./images/index-images/team3-desktop.jpg    270w,
+                  ./images/index-images/team3-mobile@2x.jpg  900w,
+                  ./images/index-images/team3-tablet@2x.jpg  708w,
+                  ./images/index-images/team3-desktop@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/index-images/team3-mobile.jpg"
+                alt="мужчина"
+              />
+              <div class="team__card">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p class="team__job" lang="en">Marketing</p>
                 <ul class="team-social">
@@ -381,22 +384,24 @@
                     </a>
                   </li>
                 </ul>
-              </li>
-              <li class="team__item">
-                <img
-                  class="team__profile-pic"
-                  srcset="
-                    ./images/index-images/team4-mobile.jpg     450w,
-                    ./images/index-images/team4-tablet.jpg     354w,
-                    ./images/index-images/team4-desktop.jpg    270w,
-                    ./images/index-images/team4-mobile@2x.jpg  900w,
-                    ./images/index-images/team4-tablet@2x.jpg  708w,
-                    ./images/index-images/team4-desktop@2x.jpg 540w
-                  "
-                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
-                  src="./images/index-images/team4-mobile.jpg"
-                  alt="мужчина"
-                />
+              </div>
+            </li>
+            <li class="team__item">
+              <img
+                class="team__profile-pic"
+                srcset="
+                  ./images/index-images/team4-mobile.jpg     450w,
+                  ./images/index-images/team4-tablet.jpg     354w,
+                  ./images/index-images/team4-desktop.jpg    270w,
+                  ./images/index-images/team4-mobile@2x.jpg  900w,
+                  ./images/index-images/team4-tablet@2x.jpg  708w,
+                  ./images/index-images/team4-desktop@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/index-images/team4-mobile.jpg"
+                alt="мужчина"
+              />
+              <div class="team__card">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p class="team__job" lang="en">UI Designer</p>
                 <ul class="team-social">
@@ -435,14 +440,15 @@
                     </a>
                   </li>
                 </ul>
-              </li>
-            </ul>
-          </section>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
+      </section>
+
       <!-- our clients section -->
-      <div class="container container--no-flex">
-        <section class="clients section">
+      <section class="clients section">
+        <div class="container">
           <h2 class="clients__title">Постоянные клиенты</h2>
           <ul class="clients__list">
             <li class="clients__item">
@@ -488,89 +494,87 @@
               </a>
             </li>
           </ul>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <div class="footpiece">
-        <div class="container container__footer">
-          <address class="contact-us">
-            <a href="./index.html" class="logo logo__footer"
-              ><span class="logo__web">Web</span><span class="logo__inverse">Studio</span></a
-            >
-            <ul class="contact-us__list">
-              <li class="contact-us__item">
-                <a
-                  class="contact-us__link contact-us__link--address"
-                  href="https://www.google.com.ua/maps/ms?msid=218324961284362248250.0004ea06cd32ef222b213&msa=0"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
-              </li>
-              <li class="contact-us__item">
-                <a
-                  class="contact-us__link contact-us__link--contacts"
-                  href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="contact-us__item">
-                <a class="contact-us__link contact-us__link--contacts" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-            </ul>
-          </address>
-          <div class="social-section">
-            <h3 class="social-section__title">присоединяйтесь</h3>
-            <ul class="social-section__list">
-              <li class="social-section__item">
-                <a class="social-section__link" href="">
-                  <svg width="20" height="20">
-                    <use href="./images/icon-sprite.svg#icon-instagram" />
-                  </svg>
-                </a>
-              </li>
-              <li class="social-section__item">
-                <a class="social-section__link" href="">
-                  <svg width="20" height="20">
-                    <use href="./images/icon-sprite.svg#icon-twitter" />
-                  </svg>
-                </a>
-              </li>
-              <li class="social-section__item">
-                <a class="social-section__link" href="">
-                  <svg width="20" height="20">
-                    <use href="./images/icon-sprite.svg#icon-facebook" />
-                  </svg>
-                </a>
-              </li>
-              <li class="social-section__item">
-                <a class="social-section__link" href="">
-                  <svg width="20" height="20">
-                    <use href="./images/icon-sprite.svg#icon-linkedin" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="subscribe-section">
-            <form name="subscribe-section__newsletter" autocomplete="off" novalidate>
-              <h3 class="subscribe-section__title">Подпишитесь на рассылку</h3>
-              <input
-                class="subscribe-section__input"
-                type="email"
-                name="email"
-                id="sub-email"
-                placeholder="E-mail"
-              />
-              <button class="subscribe-section__button" type="submit">
-                Подписаться
-                <svg class="subscribe-section__icon" width="24" height="24">
-                  <use href="./images/icon-sprite.svg#icon-send"></use>
+    <footer class="footpiece">
+      <div class="container container--flex container__footer">
+        <address class="contact-us">
+          <a href="./index.html" class="logo logo__footer"
+            ><span class="logo__web">Web</span><span class="logo__inverse">Studio</span></a
+          >
+          <ul class="contact-us__list">
+            <li class="contact-us__item">
+              <a
+                class="contact-us__link contact-us__link--address"
+                href="https://www.google.com.ua/maps/ms?msid=218324961284362248250.0004ea06cd32ef222b213&msa=0"
+                >г. Киев, пр-т Леси Украинки, 26</a
+              >
+            </li>
+            <li class="contact-us__item">
+              <a
+                class="contact-us__link contact-us__link--contacts"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="contact-us__item">
+              <a class="contact-us__link contact-us__link--contacts" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </address>
+        <div class="social-section">
+          <h3 class="social-section__title">присоединяйтесь</h3>
+          <ul class="social-section__list">
+            <li class="social-section__item">
+              <a class="social-section__link" href="">
+                <svg width="20" height="20">
+                  <use href="./images/icon-sprite.svg#icon-instagram" />
                 </svg>
-              </button>
-            </form>
-          </div>
+              </a>
+            </li>
+            <li class="social-section__item">
+              <a class="social-section__link" href="">
+                <svg width="20" height="20">
+                  <use href="./images/icon-sprite.svg#icon-twitter" />
+                </svg>
+              </a>
+            </li>
+            <li class="social-section__item">
+              <a class="social-section__link" href="">
+                <svg width="20" height="20">
+                  <use href="./images/icon-sprite.svg#icon-facebook" />
+                </svg>
+              </a>
+            </li>
+            <li class="social-section__item">
+              <a class="social-section__link" href="">
+                <svg width="20" height="20">
+                  <use href="./images/icon-sprite.svg#icon-linkedin" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subscribe-section">
+          <form name="subscribe-section__newsletter" autocomplete="off" novalidate>
+            <h3 class="subscribe-section__title">Подпишитесь на рассылку</h3>
+            <input
+              class="subscribe-section__input"
+              type="email"
+              name="email"
+              id="sub-email"
+              placeholder="E-mail"
+            />
+            <button class="subscribe-section__button" type="submit">
+              Подписаться
+              <svg class="subscribe-section__icon" width="24" height="24">
+                <use href="./images/icon-sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>

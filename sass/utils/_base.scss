@@ -73,6 +73,7 @@ main {
 }
 
 .container {
+  position: relative;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -83,18 +84,20 @@ main {
   }
 
   @media screen and (min-width: 768px) {
+    position: static;
     width: 768px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+
+  &--flex {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   @media screen and (min-width: 1200px) {
     width: 1200px;
-  }
-
-  &--no-flex {
-    display: block;
   }
 }
 

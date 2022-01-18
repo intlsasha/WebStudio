@@ -1,7 +1,5 @@
-.container-fluid {
-  &--team {
-    background-color: $bg-light;
-  }
+.team.section {
+  background-color: $bg-light;
 }
 
 .team {
@@ -22,8 +20,6 @@
     @media screen and (min-width: 768px) {
       margin: 15px;
     }
-
-    padding-bottom: 24px;
     background-color: $pure-white;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -46,9 +42,6 @@
     }
   }
 
-  &__profile-pic {
-    margin-bottom: 30px;
-  }
   &__title {
     @include title-mob-tab;
 
@@ -56,6 +49,11 @@
       @include title-web;
     }
   }
+
+  &__card {
+    padding: 30px;
+  }
+
   &__name {
     @include name;
   }

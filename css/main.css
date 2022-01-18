@@ -77,6 +77,7 @@ svg {
 }
 
 .container {
+  position: relative;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -91,7 +92,13 @@ svg {
 
 @media screen and (min-width: 768px) {
   .container {
+    position: static;
     width: 768px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container--flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -110,10 +117,6 @@ svg {
   }
 }
 
-.container--no-flex {
-  display: block;
-}
-
 .section {
   padding: 60px 0;
 }
@@ -130,8 +133,8 @@ svg {
 }
 
 .logo {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 24px;
+  padding-bottom: 25px;
   font-family: 'Raleway', 'sans-serif';
   font-weight: 700;
   font-size: 24px;
@@ -263,6 +266,10 @@ svg {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -290,7 +297,7 @@ svg {
 @media screen and (min-width: 1200px) {
   .contacts__item {
     margin-bottom: 0px;
-    margin-right: 30px;
+    margin-right: 0px;
   }
 }
 
@@ -301,6 +308,12 @@ svg {
 @media screen and (min-width: 768px) {
   .contacts__item:last-child {
     margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item:last-child {
+    margin-right: 30px;
   }
 }
 
@@ -343,6 +356,8 @@ svg {
 @media screen and (min-width: 1200px) {
   .contacts__link {
     font-size: 14px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -655,10 +670,11 @@ svg {
   vertical-align: middle;
 }
 
-.container-fluid {
-  margin: auto;
+.hero.section {
+  margin: 0 auto;
   max-width: 480px;
-  height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index-images/bg-mobile.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index-images/bg-mobile.jpg");
   background-size: cover;
@@ -668,14 +684,14 @@ svg {
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .container-fluid {
+  .hero.section {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index-images/bg-mobile@2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index-images/bg-mobile@2x.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
-  .container-fluid {
+  .hero.section {
     max-width: 768px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index-images/bg-tablet.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index-images/bg-tablet.jpg");
@@ -683,29 +699,30 @@ svg {
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .container-fluid {
+  .hero.section {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index-images/bg-tablet@2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index-images/bg-tablet@2x.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .container-fluid {
+  .hero.section {
     max-width: 1600px;
-    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index-images/bg-desktop.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index-images/bg-desktop.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .container-fluid {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./images/index-images/bg-desktop@2x.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./images/index-images/bg-desktop@2x.jpg");
+  .hero.section {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/index-images/bg-desktop@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/index-images/bg-desktop@2x.jpg");
   }
 }
 
-.container-fluid--centered {
+.hero.section--centered {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -885,7 +902,7 @@ svg {
   margin: 0;
 }
 
-.container-fluid--team {
+.team.section {
   background-color: #f5f4fa;
 }
 
@@ -905,7 +922,6 @@ svg {
 }
 
 .team__item {
-  padding-bottom: 24px;
   background-color: #fff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -948,10 +964,6 @@ svg {
   margin-right: 0;
 }
 
-.team__profile-pic {
-  margin-bottom: 30px;
-}
-
 .team__title {
   margin-top: 0;
   margin-bottom: 30px;
@@ -972,6 +984,10 @@ svg {
     letter-spacing: 0.03em;
     color: #212121;
   }
+}
+
+.team__card {
+  padding: 30px;
 }
 
 .team__name {
@@ -1437,7 +1453,6 @@ svg {
 .project__title {
   margin-top: 0;
   margin-bottom: 4px;
-  padding-top: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
