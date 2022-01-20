@@ -77,7 +77,6 @@ svg {
 }
 
 .container {
-  position: relative;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -133,8 +132,8 @@ svg {
 }
 
 .logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: 'Raleway', 'sans-serif';
   font-weight: 700;
   font-size: 24px;
@@ -143,25 +142,24 @@ svg {
   color: #212121;
 }
 
-@media screen and (min-width: 1200px) {
-  .logo {
-    font-size: 26px;
-    line-height: 1.19;
-  }
-}
-
 .logo__web {
   color: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
   .logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
     margin-right: 88px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .logo {
+    font-size: 26px;
+    line-height: 1.19;
+    padding-top: 24px;
+    padding-bottom: 25px;
     margin-right: 93px;
   }
 }
@@ -190,12 +188,6 @@ svg {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .site-nav__item:last-child {
-    margin-bottom: 302px;
   }
 }
 
@@ -246,6 +238,13 @@ svg {
     height: 4px;
     border-radius: 2px;
     background-color: #2196f3;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts {
+    position: absolute;
+    bottom: 134px;
   }
 }
 
@@ -376,6 +375,11 @@ svg {
   }
 }
 
+.test {
+  margin: 0 auto;
+  position: relative;
+}
+
 .menu-button {
   position: absolute;
   top: 10px;
@@ -426,10 +430,9 @@ svg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vmax;
-    padding: 40px 0;
-    padding-left: 14px;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px;
     background-color: #fff;
   }
   .menu-content.is-open {
@@ -437,13 +440,9 @@ svg {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .menu-content {
-    padding-left: 48px;
-  }
-}
-
 .mobile-socials {
+  position: absolute;
+  bottom: 48px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -474,6 +473,10 @@ svg {
 .mobile-socials__item:not(:first-child) {
   padding-left: 10px;
   border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.centered {
+  margin: 0 auto;
 }
 
 .footpiece {
@@ -829,6 +832,12 @@ svg {
   color: #212121;
 }
 
+@media screen and (max-width: 767px) {
+  .strengths__title {
+    text-align: center;
+  }
+}
+
 .strengths__description {
   margin: 0;
   font-weight: 400;
@@ -929,7 +938,7 @@ svg {
 }
 
 @media screen and (max-width: 767px) {
-  .team__item {
+  .team__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
