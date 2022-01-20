@@ -190,9 +190,14 @@
   }
 }
 
+.menu-centered {
+  margin: 0 auto;
+}
+
 .menu-content {
   display: flex;
   align-items: center;
+  position: relative;
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -202,7 +207,6 @@
     width: 100vw;
     height: 100vh;
     padding: 40px;
-
     background-color: $pure-white;
 
     &.is-open {
